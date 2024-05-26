@@ -1,0 +1,36 @@
+# Base for building the ERD.
+
+Departments
+-
+dept_no PK string 
+dept_name varchar(30)
+
+dept_emp
+-
+emp_no int INDEX
+dept_no FK >- Departments.dept_no 
+
+dept_managers
+-
+dept_no FK >- Departments.dept_no string
+emp_no FK >- dept_emp.emp_no INDEX
+
+employees
+-
+emp_no
+emp_title_id
+birth_date
+first_name
+last_name
+sex
+hire_date
+
+salaries
+-
+emp_no
+salary
+
+titles
+-
+title_id
+title
